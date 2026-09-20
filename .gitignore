@@ -1,0 +1,35 @@
+# Dependencies
+/node_modules
+/.pnpm
+/.yarn
+
+# Next.js build output
+/.next/
+/out/
+/build
+
+# Environment files - SECRETS (Never commit to Git!)
+.env
+.env*.local
+.env.development
+.env.test
+.env.production
+*.env
+
+# TypeScript build info
+tsconfig.tsbuildinfo
+
+# Local uploads & temporary data
+/uploads/*
+!/uploads/.gitkeep
+/scratch/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS metadata
+.DS_Store
+Thumbs.db
