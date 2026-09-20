@@ -46,7 +46,7 @@ export async function processAIShoppingAssistant(userPrompt: string): Promise<AI
         messages: [
           {
             role: 'system',
-            content: 'You are the helpful AI concierge for Knot & Bloom, a handmade gift store. Extract the customer budget limit (in INR) and key search keywords from their query.',
+            content: 'You are the helpful AI concierge for Romi & Knot, a handmade gift store. Extract the customer budget limit (in INR) and key search keywords from their query.',
           },
           {
             role: 'user',
@@ -109,7 +109,7 @@ export async function runDatabaseFallbackAssistant(
   const aiCommentary =
     aiCommentaryOverride ||
     (products.length > 0
-      ? `Here are our top handcrafted picks matching "${userPrompt}" from the Knot & Bloom workshop!`
+      ? `Here are our top handcrafted picks matching "${userPrompt}" from the Romi & Knot workshop!`
       : `We couldn't find an exact match for "${userPrompt}", but explore our most loved artisanal gifts below:`);
 
   return {
@@ -147,7 +147,7 @@ export async function generateAIProductCopy(productName: string, category: strin
         messages: [
           {
             role: 'system',
-            content: 'Write an enticing 2-sentence handmade e-commerce product description for Knot & Bloom.',
+            content: 'Write an enticing 2-sentence handmade e-commerce product description for Romi & Knot.',
           },
           {
             role: 'user',

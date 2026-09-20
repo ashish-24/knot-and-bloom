@@ -14,9 +14,9 @@ export default function Footer() {
     whatsappNumber?: string;
   }>({
     contactPhone: '+91 98765 43210',
-    supportEmail: 'hello@knotandbloom.com',
+    supportEmail: 'hello@romiknot.com',
     studioAddress: 'Handmade Studio, India',
-    footerTagline: 'Knot & Bloom creates handmade decoration items, custom resin keychains, personalized couple plaques, and artisan hampers. Handcrafted with love.',
+    footerTagline: 'Romi & Knot creates handmade decoration items, custom resin keychains, personalized couple plaques, and artisan hampers. Handcrafted with love.',
     whatsappNumber: '919876543210',
   });
 
@@ -144,7 +144,7 @@ export default function Footer() {
         {/* Bottom copyright & admin access */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-charcoal-500">
           <div className="space-y-1 text-center sm:text-left">
-            <p>© {new Date().getFullYear()} Knot & Bloom Studio. All rights reserved. Handcrafted with love.</p>
+            <p>© {new Date().getFullYear()} Romi & Knot Studio. All rights reserved. Handcrafted with love.</p>
             <p className="text-[11px] text-charcoal-400">
               Website created by{' '}
               <a

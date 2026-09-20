@@ -7,15 +7,15 @@ export default function AdminSettingsPage() {
   const [formData, setFormData] = useState({
     announcementText: 'Handcrafted Crochet & Botanical Gifts — Free Delivery Over ₹999',
     announcementEnabled: true,
-    upiId: 'knotandbloom@upi',
-    upiDisplayName: 'Knot & Bloom Handmade',
+    upiId: 'romiandknot@upi',
+    upiDisplayName: 'Romi & Knot Handmade',
     upiQrUrl: '',
     whatsappNumber: '919876543210',
     contactPhone: '+91 98765 43210',
-    supportEmail: 'hello@knotandbloom.com',
+    supportEmail: 'hello@romiandknot.com',
     gmailAppPassword: '',
     studioAddress: 'Handmade Studio, India',
-    footerTagline: 'Knot & Bloom creates handmade decoration items, custom resin keychains, personalized couple plaques, and artisan hampers.',
+    footerTagline: 'Romi & Knot creates handmade decoration items, custom resin keychains, personalized couple plaques, and artisan hampers.',
     deliveryFee: '49',
     freeDeliveryOver: '999',
     currentPassword: '',
@@ -353,7 +353,7 @@ export default function AdminSettingsPage() {
                 name="supportEmail"
                 value={formData.supportEmail}
                 onChange={handleChange}
-                placeholder="hello@knotandbloom.com"
+                placeholder="hello@romiandknot.com"
                 className="w-full px-3.5 py-2.5 bg-cream-50 border border-cream-300 rounded-xl text-xs outline-none focus:border-brand-600 text-charcoal-900"
               />
             </div>
@@ -469,7 +469,7 @@ export default function AdminSettingsPage() {
                 name="upiId"
                 value={formData.upiId}
                 onChange={handleChange}
-                placeholder="knotandbloom@upi"
+                placeholder="romiandknot@upi"
                 className="w-full px-3.5 py-2.5 bg-cream-50 border border-cream-300 rounded-xl text-xs font-mono outline-none focus:border-brand-600 text-charcoal-900"
               />
             </div>
@@ -482,7 +482,7 @@ export default function AdminSettingsPage() {
                 name="upiDisplayName"
                 value={formData.upiDisplayName}
                 onChange={handleChange}
-                placeholder="Knot & Bloom Handmade"
+                placeholder="Romi & Knot Handmade"
                 className="w-full px-3.5 py-2.5 bg-cream-50 border border-cream-300 rounded-xl text-xs outline-none focus:border-brand-600 text-charcoal-900"
               />
             </div>

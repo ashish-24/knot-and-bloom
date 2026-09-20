@@ -23,8 +23,8 @@ export default async function PaymentPage({ searchParams }: PaymentPageProps) {
 
   const storeSettings = await prisma.storeSettings.findFirst();
   const upiSettings = {
-    upiId: storeSettings?.upiId || 'knotandbloom@upi',
-    upiDisplayName: storeSettings?.upiDisplayName || 'Knot & Bloom Handmade',
+    upiId: storeSettings?.upiId || 'romiandknot@upi',
+    upiDisplayName: storeSettings?.upiDisplayName || 'Romi & Knot Handmade',
     upiQrUrl: storeSettings?.upiQrUrl || null,
   };
 

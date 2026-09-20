@@ -20,7 +20,7 @@ export function generateProductWhatsAppUrl(
   payload: WhatsAppProductPayload
 ): string {
   const cleanPhone = formatWhatsAppPhone(phone);
-  let message = `Hello Knot & Bloom! 🌿\nI would like to order:\n\n*Product:* ${payload.productName}\n*SKU:* ${payload.sku}\n*Quantity:* ${payload.quantity}\n*Price:* ₹${payload.price}\n`;
+  let message = `Hello Romi & Knot! 🌿\nI would like to order:\n\n*Product:* ${payload.productName}\n*SKU:* ${payload.sku}\n*Quantity:* ${payload.quantity}\n*Price:* ₹${payload.price}\n`;
 
   if (payload.customizationDetails && Object.keys(payload.customizationDetails).length > 0) {
     message += `*Customization:* \n`;
@@ -38,7 +38,7 @@ export function generateCartWhatsAppUrl(
   payload: WhatsAppCartPayload
 ): string {
   const cleanPhone = formatWhatsAppPhone(phone);
-  let message = `Hello Knot & Bloom! 🌿\nI would like to place an order for my cart:\n\n`;
+  let message = `Hello Romi & Knot! 🌿\nI would like to place an order for my cart:\n\n`;
 
   payload.items.forEach((item, idx) => {
     message += `${idx + 1}. *${item.productName}* (Qty: ${item.quantity}) - ₹${item.price * item.quantity}\n`;

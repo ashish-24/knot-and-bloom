@@ -99,7 +99,7 @@ export default function ProductCard({ product }: ProductCardProps) {
           />
         ) : (
           <div className="w-full h-full flex items-center justify-center text-charcoal-400 font-serif italic text-xs">
-            Knot & Bloom Handcraft
+            Romi & Knot Handcraft
           </div>
         )}
 

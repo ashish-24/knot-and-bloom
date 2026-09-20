@@ -23,7 +23,7 @@ export default function AboutPage() {
           </blockquote>
 
           <p className="text-base text-charcoal-800 leading-relaxed">
-            Knot & Bloom was born from a simple belief: in a world filled with mass-produced gifts, handmade creations carry a warmth and personality that machines can never truly replicate. Every crochet stitch, flower, and handcrafted detail is made with care, patience, and love.
+            Romi & Knot was born from a simple belief: in a world filled with mass-produced gifts, handmade creations carry a warmth and personality that machines can never truly replicate. Every crochet stitch, flower, and handcrafted detail is made with care, patience, and love.
           </p>
 
           <div className="space-y-2">

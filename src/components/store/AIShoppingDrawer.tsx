@@ -57,7 +57,7 @@ export default function AIShoppingDrawer({ isOpen, onClose }: AIShoppingDrawerPr
                 <Sparkles className="w-5 h-5 text-terracotta-300 animate-pulse" />
               </div>
               <div>
-                <h3 className="text-lg font-serif font-semibold">Knot & Bloom AI Assistant</h3>
+                <h3 className="text-lg font-serif font-semibold">Romi & Knot AI Assistant</h3>
                 <p className="text-xs text-cream-300">Intelligent Gift Finder & Shopping Concierge</p>
               </div>
             </div>

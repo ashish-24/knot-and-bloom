@@ -82,7 +82,7 @@ export default function CustomerRegisterPage() {
               Create Account
             </h1>
             <p className="text-xs text-charcoal-500">
-              Join Knot & Bloom to save custom gifts and track artisan orders.
+              Join Romi & Knot to save custom gifts and track artisan orders.
             </p>
           </div>
 

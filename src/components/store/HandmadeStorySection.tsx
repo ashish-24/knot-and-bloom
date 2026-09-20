@@ -89,7 +89,7 @@ export default function HandmadeStorySection() {
             </h2>
 
             <p className="text-sm sm:text-base text-charcoal-800 leading-relaxed font-sans font-medium">
-              Knot & Bloom was born from a simple belief: in a world filled with mass-produced gifts, handmade creations carry a warmth and personality that machines can never replicate. Every crochet stitch, yarn bow, and handcrafted bloom is made with patience, care, and love.
+              Romi & Knot was born from a simple belief: in a world filled with mass-produced gifts, handmade creations carry a warmth and personality that machines can never replicate. Every crochet stitch, yarn bow, and handcrafted bloom is made with patience, care, and love.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">

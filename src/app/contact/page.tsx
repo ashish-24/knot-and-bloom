@@ -37,7 +37,7 @@ export default function ContactPage() {
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-terracotta-500 shrink-0" />
-                <span>hello@knotandbloom.com</span>
+                <span>hello@romiandknot.com</span>
               </div>
             </div>
 

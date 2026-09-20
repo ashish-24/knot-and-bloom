@@ -49,7 +49,7 @@ export default function Logo({ className = '', variant = 'dark', showSubtitle = 
             fill={strokeClass}
           />
 
-          {/* Wordmark: Knot */}
+          {/* Wordmark: Romi */}
           <text
             x="28"
             y="62"
@@ -59,12 +59,12 @@ export default function Logo({ className = '', variant = 'dark', showSubtitle = 
             fontWeight="400"
             letterSpacing="1"
           >
-            Knot
+            Romi
           </text>
 
-          {/* Ampersand & Bloom Accent */}
+          {/* Ampersand & Knot Accent */}
           <text
-            x="165"
+            x="170"
             y="42"
             fill={variant === 'colored' ? '#c86847' : strokeClass}
             fontFamily="Inter, sans-serif"
@@ -72,7 +72,7 @@ export default function Logo({ className = '', variant = 'dark', showSubtitle = 
             fontWeight="300"
             fontStyle="italic"
           >
-            & Bloom
+            & Knot
           </text>
         </svg>
       </div>

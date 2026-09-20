@@ -44,7 +44,7 @@ export default async function AdminDashboardPage() {
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 bg-white p-6 rounded-3xl border border-cream-300 shadow-soft">
         <div>
           <span className="text-xs uppercase tracking-widest font-semibold text-terracotta-600">
-            Knot & Bloom Studio Management
+            Romi & Knot Studio Management
           </span>
           <h1 className="text-2xl sm:text-3xl font-serif text-charcoal-900 mt-1">
             Welcome back, {admin.name}

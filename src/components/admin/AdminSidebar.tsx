@@ -31,7 +31,7 @@ export default function AdminSidebar({ admin }: { admin?: { name?: string; email
   if (pathname === '/admin/login') return null;
 
   const adminName = admin?.name || 'Admin';
-  const adminEmail = admin?.email || 'admin@knotandbloom.com';
+  const adminEmail = admin?.email || 'admin@romiandknot.com';
 
   const handleLogout = async () => {
     await fetch('/api/admin/logout', { method: 'POST' });

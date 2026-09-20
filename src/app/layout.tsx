@@ -6,13 +6,13 @@ import AntiInspectProtection from '@/components/security/AntiInspectProtection';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://knot-and-bloom-ten.vercel.app'),
-  title: 'Knot & Bloom | Artisanal Handmade Decor & Personalised Gifts',
+  title: 'Romi & Knot | Artisanal Handmade Decor & Personalised Gifts',
   description:
-    'Knot & Bloom — Handcrafted milk-cotton scrunchies, amigurumi plushies, botanical resin keychains, and custom photo plaque gifts made with love in India.',
+    'Romi & Knot — Handcrafted milk-cotton scrunchies, amigurumi plushies, botanical resin keychains, and custom photo plaque gifts made with love in India.',
   keywords: [
-    'Knot & Bloom',
-    'Knot and Bloom',
-    'Knot & Bloom Studio',
+    'Romi & Knot',
+    'Romi and Knot',
+    'Romi & Knot Studio',
     'handmade gifts India',
     'crochet scrunchies',
     'amigurumi keepsakes',
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     'resin charms',
     'custom photo plaques',
   ],
-  authors: [{ name: 'Knot & Bloom Studio' }],
+  authors: [{ name: 'Romi & Knot Studio' }],
   icons: {
     icon: '/icon.svg',
     shortcut: '/icon.svg',
@@ -30,10 +30,10 @@ export const metadata: Metadata = {
     canonical: 'https://knot-and-bloom-ten.vercel.app',
   },
   openGraph: {
-    title: 'Knot & Bloom — Romi.ka Handcraft With Love',
+    title: 'Romi & Knot — Romi.ka Handcraft With Love',
     description: 'Handcrafted crochet scrunchies, amigurumi plushies, botanical resin keychains, and custom gifts.',
     url: 'https://knot-and-bloom-ten.vercel.app',
-    siteName: 'Knot & Bloom',
+    siteName: 'Romi & Knot',
     locale: 'en_IN',
     type: 'website',
   },
@@ -50,7 +50,7 @@ export default function RootLayout({
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'OnlineStore',
-    name: 'Knot & Bloom',
+    name: 'Romi & Knot',
     url: 'https://knot-and-bloom-ten.vercel.app',
     description: 'Handcrafted milk-cotton scrunchies, amigurumi keepsakes, botanical resin keychains, and personalized gifts.',
     image: 'https://knot-and-bloom-ten.vercel.app/images/crochet-craft-new.jpg',

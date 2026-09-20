@@ -251,17 +251,17 @@ model AuditLog {
 
 model StoreSettings {
   id                  String   @id @default("default")
-  storeName           String   @default("Knot & Bloom")
+  storeName           String   @default("Romi & Knot")
   tagline             String   @default("bespoke by nature")
   announcementText    String   @default("Handcrafted Crochet & Botanical Gifts — Free Delivery Over ₹999")
   announcementEnabled Boolean  @default(true)
   contactPhone        String   @default("+91 98765 43210")
-  supportEmail        String   @default("hello@knotandbloom.com")
+  supportEmail        String   @default("hello@romiandknot.com")
   studioAddress       String   @default("Handmade Studio, India")
   footerTagline       String   @default("Handcrafted decoration items, custom keychains & keepsakes.")
   whatsappNumber      String   @default("919876543210")
-  upiId               String   @default("knotandbloom@upi")
-  upiDisplayName      String   @default("Knot & Bloom Handmade")
+  upiId               String   @default("romiandknot@upi")
+  upiDisplayName      String   @default("Romi & Knot Handmade")
   upiQrUrl            String?
   deliveryFee         Float    @default(49.0)
   freeDeliveryOver    Float    @default(999.0)

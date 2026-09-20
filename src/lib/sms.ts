@@ -1,5 +1,5 @@
 /**
- * Real-time SMS & OTP Delivery Service for Knot & Bloom
+ * Real-time SMS & OTP Delivery Service for Romi & Knot
  * Supports Fast2SMS (India), Twilio (Global), 2Factor, MSG91, and WhatsApp API
  */
 
@@ -21,7 +21,7 @@ export async function sendRealtimeOtpSms(mobile: string, otpCode: string): Promi
     cleanMobile = cleanMobile.slice(2);
   }
 
-  const messageText = `Your Knot & Bloom verification OTP code is: ${otpCode}. Valid for 5 minutes. Do not share this with anyone.`;
+  const messageText = `Your Romi & Knot verification OTP code is: ${otpCode}. Valid for 5 minutes. Do not share this with anyone.`;
 
   // 1. Fast2SMS (India Fast OTP Service)
   const fast2smsKey = process.env.FAST2SMS_API_KEY || process.env.OTP_API_KEY;

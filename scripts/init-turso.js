@@ -222,12 +222,12 @@ async function main() {
 
     `CREATE TABLE IF NOT EXISTS StoreSettings (
       id TEXT PRIMARY KEY DEFAULT 'default',
-      storeName TEXT NOT NULL DEFAULT 'Knot & Bloom',
+      storeName TEXT NOT NULL DEFAULT 'Romi & Knot',
       tagline TEXT NOT NULL DEFAULT 'bespoke by nature',
       contactPhone TEXT NOT NULL DEFAULT '+91 98765 43210',
       whatsappNumber TEXT NOT NULL DEFAULT '919876543210',
-      upiId TEXT NOT NULL DEFAULT 'knotandbloom@upi',
-      upiDisplayName TEXT NOT NULL DEFAULT 'Knot & Bloom Handmade',
+      upiId TEXT NOT NULL DEFAULT 'romiandknot@upi',
+      upiDisplayName TEXT NOT NULL DEFAULT 'Romi & Knot Handmade',
       upiQrUrl TEXT,
       deliveryFee REAL NOT NULL DEFAULT 49.0,
       freeDeliveryOver REAL NOT NULL DEFAULT 999.0,
@@ -273,7 +273,7 @@ async function main() {
   // Insert default StoreSettings if missing
   await db.execute(`
     INSERT OR IGNORE INTO StoreSettings (id, storeName, tagline, contactPhone, whatsappNumber, upiId, upiDisplayName, deliveryFee, freeDeliveryOver, updatedAt)
-    VALUES ('default', 'Knot & Bloom', 'bespoke by nature', '+91 98765 43210', '919876543210', 'knotandbloom@upi', 'Knot & Bloom Handmade', 49.0, 999.0, CURRENT_TIMESTAMP);
+    VALUES ('default', 'Romi & Knot', 'bespoke by nature', '+91 98765 43210', '919876543210', 'romiandknot@upi', 'Romi & Knot Handmade', 49.0, 999.0, CURRENT_TIMESTAMP);
   `);
 
   console.log('✅ Successfully created all 20 tables on Turso Cloud Database!');

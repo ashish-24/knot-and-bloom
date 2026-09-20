@@ -4,7 +4,7 @@ import bcrypt from 'bcryptjs';
 const prisma = new PrismaClient();
 
 async function main() {
-  console.log('Seeding Knot & Bloom database with Crochet & Resin products...');
+  console.log('Seeding Romi & Knot database with Crochet & Resin products...');
 
   // 1. Initial Admin setup
   const initialPassword = process.env.ADMIN_INITIAL_PASSWORD || 'AdminKnotBloom#2026';
@@ -26,12 +26,12 @@ async function main() {
     update: {},
     create: {
       id: 'default',
-      storeName: 'Knot & Bloom',
+      storeName: 'Romi & Knot',
       tagline: 'Romi.ka handcraft With love',
       contactPhone: '+91 98765 43210',
       whatsappNumber: '919876543210',
-      upiId: 'knotandbloom@upi',
-      upiDisplayName: 'Knot & Bloom Handmade',
+      upiId: 'romiandknot@upi',
+      upiDisplayName: 'Romi & Knot Handmade',
       deliveryFee: 49.0,
       freeDeliveryOver: 999.0,
     },

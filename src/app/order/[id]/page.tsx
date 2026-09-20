@@ -154,7 +154,7 @@ export default async function OrderTrackingPage({ params }: OrderTrackingPagePro
 
             <div className="pt-3 border-t border-cream-200">
               <a
-                href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(`Hello Knot & Bloom! Checking status for Order ${order.orderNumber}`)}`}
+                href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(`Hello Romi & Knot! Checking status for Order ${order.orderNumber}`)}`}
                 target="_blank"
                 rel="noreferrer"
                 className="w-full py-2.5 px-4 bg-emerald-700 hover:bg-emerald-800 text-white rounded-xl font-semibold text-xs flex items-center justify-center gap-2"
