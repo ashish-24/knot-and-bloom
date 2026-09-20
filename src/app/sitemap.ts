@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://knot-and-bloom-ten.vercel.app';
+  const baseUrl = 'https://romi-and-knot.vercel.app';
 
   return [
     {

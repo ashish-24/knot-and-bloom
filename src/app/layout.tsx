@@ -5,7 +5,7 @@ import { WishlistProvider } from '@/components/store/WishlistContext';
 import AntiInspectProtection from '@/components/security/AntiInspectProtection';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://knot-and-bloom-ten.vercel.app'),
+  metadataBase: new URL('https://romi-and-knot.vercel.app'),
   title: 'Romi & Knot | Artisanal Handmade Decor & Personalised Gifts',
   description:
     'Romi & Knot — Handcrafted milk-cotton scrunchies, amigurumi plushies, botanical resin keychains, and custom photo plaque gifts made with love in India.',
@@ -27,12 +27,12 @@ export const metadata: Metadata = {
     apple: '/icon.svg',
   },
   alternates: {
-    canonical: 'https://knot-and-bloom-ten.vercel.app',
+    canonical: 'https://romi-and-knot.vercel.app',
   },
   openGraph: {
     title: 'Romi & Knot — Romi.ka Handcraft With Love',
     description: 'Handcrafted crochet scrunchies, amigurumi plushies, botanical resin keychains, and custom gifts.',
-    url: 'https://knot-and-bloom-ten.vercel.app',
+    url: 'https://romi-and-knot.vercel.app',
     siteName: 'Romi & Knot',
     locale: 'en_IN',
     type: 'website',
@@ -51,9 +51,9 @@ export default function RootLayout({
     '@context': 'https://schema.org',
     '@type': 'OnlineStore',
     name: 'Romi & Knot',
-    url: 'https://knot-and-bloom-ten.vercel.app',
+    url: 'https://romi-and-knot.vercel.app',
     description: 'Handcrafted milk-cotton scrunchies, amigurumi keepsakes, botanical resin keychains, and personalized gifts.',
-    image: 'https://knot-and-bloom-ten.vercel.app/images/crochet-craft-new.jpg',
+    image: 'https://romi-and-knot.vercel.app/images/crochet-craft-new.jpg',
     sameAs: ['https://www.linkedin.com/in/ashish-ranjan24/'],
     address: {
       '@type': 'PostalAddress',

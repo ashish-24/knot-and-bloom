@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = 'https://knot-and-bloom-ten.vercel.app';
+  const baseUrl = 'https://romi-and-knot.vercel.app';
 
   return {
     rules: [
