@@ -83,10 +83,14 @@ export async function POST(request: Request) {
 
     await logAdminAction('LOGIN_2FA_OTP_SENT', `Generated 2FA Gmail OTP for ${cleanEmail}`, admin.name);
 
+    const isLiveMailer = emailResult.success && emailResult.provider === 'Gmail SMTP';
+
     return NextResponse.json({
       requireOtp: true,
       email: admin.email,
-      message: `2FA Verification OTP sent to your Gmail address (${admin.email}). Please check your inbox.`,
+      message: isLiveMailer
+        ? `2FA Verification OTP code sent to your Gmail inbox (${admin.email}). Please check your inbox.`
+        : `2FA OTP Generated: [ ${generatedOtp} ] (Enter this 6-digit code to log in. To send real emails directly to ${admin.email}, add GMAIL_APP_PASSWORD in Vercel settings).`,
       provider: emailResult.provider,
     });
   } catch (error: any) {
