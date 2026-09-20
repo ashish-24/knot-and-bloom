@@ -14,7 +14,7 @@ async function main() {
   await db.execute({
     sql: `INSERT OR REPLACE INTO Admin (id, email, passwordHash, name, updatedAt)
           VALUES (?, ?, ?, ?, CURRENT_TIMESTAMP);`,
-    args: ['admin-1', 'admin@knotandbloom.com', passwordHash, 'Knot & Bloom Founder'],
+    args: ['admin-1', 'ashishkanhaiya7765@gmail.com', passwordHash, 'Ashish Ranjan'],
   });
 
   // 2. Categories

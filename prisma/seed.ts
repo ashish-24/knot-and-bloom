@@ -11,11 +11,11 @@ async function main() {
   const passwordHash = await bcrypt.hash(initialPassword, 10);
 
   await prisma.admin.upsert({
-    where: { email: 'admin@knotandbloom.com' },
+    where: { email: 'ashishkanhaiya7765@gmail.com' },
     update: { passwordHash },
     create: {
-      email: 'admin@knotandbloom.com',
-      name: 'Knot & Bloom Founder',
+      email: 'ashishkanhaiya7765@gmail.com',
+      name: 'Ashish Ranjan',
       passwordHash,
     },
   });

@@ -7,7 +7,7 @@ import { Lock, ShieldAlert, KeyRound, Mail, ArrowLeft, CheckCircle2 } from 'luci
 
 export default function AdminLoginPage() {
   const router = useRouter();
-  const [email, setEmail] = useState('admin@knotandbloom.com');
+  const [email, setEmail] = useState('ashishkanhaiya7765@gmail.com');
   const [password, setPassword] = useState('');
   const [otpCode, setOtpCode] = useState('');
   const [step, setStep] = useState<'password' | 'otp'>('password');
