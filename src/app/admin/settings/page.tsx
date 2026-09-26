@@ -13,6 +13,7 @@ export default function AdminSettingsPage() {
     whatsappNumber: '919876543210',
     contactPhone: '+91 98765 43210',
     supportEmail: 'hello@romiandknot.com',
+    gmailSenderEmail: 'ashishkanhaiya7765@gmail.com',
     gmailAppPassword: '',
     studioAddress: 'Handmade Studio, India',
     footerTagline: 'Romi & Knot creates handmade decoration items, custom resin keychains, personalized couple plaques, and artisan hampers.',
@@ -47,6 +48,7 @@ export default function AdminSettingsPage() {
           whatsappNumber: data.whatsappNumber || prev.whatsappNumber,
           contactPhone: data.contactPhone || prev.contactPhone,
           supportEmail: data.supportEmail || prev.supportEmail,
+          gmailSenderEmail: data.gmailSenderEmail || prev.gmailSenderEmail,
           studioAddress: data.studioAddress || prev.studioAddress,
           footerTagline: data.footerTagline || prev.footerTagline,
           deliveryFee: data.deliveryFee !== undefined ? String(data.deliveryFee) : prev.deliveryFee,
@@ -410,10 +412,10 @@ export default function AdminSettingsPage() {
               </label>
               <input
                 type="email"
-                name="supportEmail"
-                value={formData.supportEmail}
+                name="gmailSenderEmail"
+                value={formData.gmailSenderEmail}
                 onChange={handleChange}
-                placeholder="yourbusiness@gmail.com"
+                placeholder="ashishkanhaiya7765@gmail.com"
                 className="w-full px-3.5 py-2.5 bg-cream-50 border border-cream-300 rounded-xl text-xs outline-none focus:border-brand-600 text-charcoal-900"
               />
             </div>

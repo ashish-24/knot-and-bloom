@@ -12,12 +12,22 @@ import { generateCartWhatsAppUrl } from '@/lib/whatsapp';
 
 export default function CartPage() {
   const { items, removeItem, updateQuantity, subtotal, itemCount } = useCart();
+  const [waNumber, setWaNumber] = React.useState('919876543210');
+
+  React.useEffect(() => {
+    fetch('/api/settings')
+      .then((res) => res.json())
+      .then((data) => {
+        if (data?.whatsappNumber) setWaNumber(data.whatsappNumber);
+      })
+      .catch(() => {});
+  }, []);
 
   const finalDeliveryFee = subtotal >= 999 ? 0 : 49;
   const finalTotal = subtotal + finalDeliveryFee;
 
   const handleWhatsApp = () => {
-    const whatsappUrl = generateCartWhatsAppUrl('919876543210', {
+    const whatsappUrl = generateCartWhatsAppUrl(waNumber, {
       items: items.map((i) => ({
         productName: i.name,
         sku: i.productId,

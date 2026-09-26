@@ -9,11 +9,21 @@ import { generateCartWhatsAppUrl } from '@/lib/whatsapp';
 
 export default function CartDrawer() {
   const { items, removeItem, updateQuantity, isOpen, setIsOpen, subtotal, itemCount } = useCart();
+  const [waNumber, setWaNumber] = React.useState('919876543210');
+
+  React.useEffect(() => {
+    fetch('/api/settings')
+      .then((res) => res.json())
+      .then((data) => {
+        if (data?.whatsappNumber) setWaNumber(data.whatsappNumber);
+      })
+      .catch(() => {});
+  }, []);
 
   if (!isOpen) return null;
 
   const handleWhatsAppCheckout = () => {
-    const whatsappUrl = generateCartWhatsAppUrl('919876543210', {
+    const whatsappUrl = generateCartWhatsAppUrl(waNumber, {
       items: items.map((i) => ({
         productName: i.name,
         sku: i.productId,

@@ -67,9 +67,20 @@ export default function ProductCard({ product }: ProductCardProps) {
     });
   };
 
+  const [waNumber, setWaNumber] = React.useState('919876543210');
+
+  React.useEffect(() => {
+    fetch('/api/settings')
+      .then((res) => res.json())
+      .then((data) => {
+        if (data?.whatsappNumber) setWaNumber(data.whatsappNumber);
+      })
+      .catch(() => {});
+  }, []);
+
   const handleWhatsAppQuickOrder = (e: React.MouseEvent) => {
     e.preventDefault();
-    const url = generateProductWhatsAppUrl('919876543210', {
+    const url = generateProductWhatsAppUrl(waNumber, {
       productName: selectedColorName ? `${product.name} (${selectedColorName})` : product.name,
       sku: product.sku || product.id,
       quantity: 1,

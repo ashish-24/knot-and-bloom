@@ -257,6 +257,7 @@ model StoreSettings {
   announcementEnabled Boolean  @default(true)
   contactPhone        String   @default("+91 98765 43210")
   supportEmail        String   @default("hello@romiandknot.com")
+  gmailSenderEmail    String?  @default("ashishkanhaiya7765@gmail.com")
   studioAddress       String   @default("Handmade Studio, India")
   footerTagline       String   @default("Handcrafted decoration items, custom keychains & keepsakes.")
   whatsappNumber      String   @default("919876543210")

@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Navbar from '@/components/store/Navbar';
 import Footer from '@/components/store/Footer';
 import MobileNav from '@/components/store/MobileNav';
@@ -8,11 +8,40 @@ import { MessageCircle, Phone, Mail, MapPin } from 'lucide-react';
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
+  const [settings, setSettings] = useState<{
+    contactPhone?: string;
+    supportEmail?: string;
+    studioAddress?: string;
+    whatsappNumber?: string;
+  }>({
+    contactPhone: '+91 98765 43210',
+    supportEmail: 'hello@romiandknot.com',
+    studioAddress: 'Handcrafted Studio, India',
+    whatsappNumber: '919876543210',
+  });
+
+  useEffect(() => {
+    fetch(`/api/settings?t=${Date.now()}`, { cache: 'no-store' })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data) {
+          setSettings({
+            contactPhone: data.contactPhone || '+91 98765 43210',
+            supportEmail: data.supportEmail || 'hello@romiandknot.com',
+            studioAddress: data.studioAddress || 'Handcrafted Studio, India',
+            whatsappNumber: data.whatsappNumber || '919876543210',
+          });
+        }
+      })
+      .catch(() => {});
+  }, []);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitted(true);
   };
+
+  const cleanWhatsapp = (settings.whatsappNumber || '919876543210').replace(/\D/g, '');
 
   return (
     <div className="min-h-screen flex flex-col bg-cream-100 text-charcoal-900 pb-20 lg:pb-0">
@@ -29,21 +58,21 @@ export default function ContactPage() {
             <div className="space-y-3 text-xs text-charcoal-700">
               <div className="flex items-center gap-3">
                 <MapPin className="w-5 h-5 text-terracotta-500 shrink-0" />
-                <span>Handcrafted Studio, Jaipur, Rajasthan, India</span>
+                <span>{settings.studioAddress}</span>
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-terracotta-500 shrink-0" />
-                <span>+91 98765 43210</span>
+                <span>{settings.contactPhone}</span>
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-terracotta-500 shrink-0" />
-                <span>hello@romiandknot.com</span>
+                <span>{settings.supportEmail}</span>
               </div>
             </div>
 
             <div className="pt-4">
               <a
-                href="https://wa.me/919876543210"
+                href={`https://wa.me/${cleanWhatsapp}`}
                 target="_blank"
                 rel="noreferrer"
                 className="w-full py-3 px-4 bg-emerald-700 hover:bg-emerald-800 text-white rounded-xl font-semibold text-xs flex items-center justify-center gap-2"

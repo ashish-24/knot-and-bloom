@@ -6,17 +6,25 @@ async function main() {
 
   const db = createClient({ url, authToken });
 
-  console.log('Updating Turso StoreSettings to Romi & Knot...');
+  console.log('Adding column gmailSenderEmail if missing...');
+  try {
+    await db.execute(`ALTER TABLE StoreSettings ADD COLUMN gmailSenderEmail TEXT DEFAULT 'ashishkanhaiya7765@gmail.com';`);
+  } catch (e) {
+    // Column may already exist
+  }
+
+  console.log('Updating Turso StoreSettings...');
   await db.execute(`
     UPDATE StoreSettings
     SET storeName = 'Romi & Knot',
         upiDisplayName = 'Romi & Knot Handmade',
         upiId = 'romiandknot@upi',
-        supportEmail = 'hello@romiandknot.com'
+        supportEmail = 'hello@romiandknot.com',
+        gmailSenderEmail = 'ashishkanhaiya7765@gmail.com'
     WHERE id = 'default';
   `);
 
-  console.log('✅ Successfully updated live Turso Cloud database StoreSettings table to "Romi & Knot"!');
+  console.log('✅ Successfully updated live Turso Cloud database StoreSettings table!');
 }
 
 main().catch((err) => {

@@ -1,4 +1,5 @@
 import nodemailer from 'nodemailer';
+import { prisma } from './db';
 
 export interface SendEmailOtpResult {
   success: boolean;
@@ -17,7 +18,8 @@ export async function sendGmailOtp(
     return { success: false, provider: 'Gmail', error: 'Invalid recipient email address' };
   }
 
-  const gmailUser = process.env.GMAIL_USER || process.env.SMTP_USER || process.env.SUPPORT_EMAIL || 'hello@romiandknot.com';
+  const storeSettings = await prisma.storeSettings.findFirst().catch(() => null);
+  const gmailUser = process.env.GMAIL_USER || storeSettings?.gmailSenderEmail || process.env.SMTP_USER || 'ashishkanhaiya7765@gmail.com';
   const gmailPass = process.env.GMAIL_APP_PASSWORD || process.env.SMTP_PASS;
 
   if (!gmailPass) {
